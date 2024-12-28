@@ -7,7 +7,7 @@ import org.example.qnafrontendjavafx.core.presentation.page.PageType;
 
 import java.util.Map;
 
-import static org.example.qnafrontendjavafx.application.navigator.ApplicationPageType.GENERAL_USER_SIGN_UP_PAGE;
+import static org.example.qnafrontendjavafx.application.navigator.ApplicationPageType.LOGIN_PAGE;
 
 public class ApplicationPageNavigator implements PageNavigator {
     private final Map<PageType, Page> pages;
@@ -27,7 +27,7 @@ public class ApplicationPageNavigator implements PageNavigator {
     @Override
     public void start(Stage primaryStage) {
         this.stage = primaryStage;
-        show(GENERAL_USER_SIGN_UP_PAGE);
+        show(LOGIN_PAGE);
     }
 
     @Override

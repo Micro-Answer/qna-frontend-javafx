@@ -10,7 +10,7 @@ import org.example.qnafrontendjavafx.core.presentation.page.Controller;
 import org.example.qnafrontendjavafx.core.presentation.page.EventPublisher;
 import org.example.qnafrontendjavafx.application.domain.general.user.signup.service.GeneralUserSignUpService;
 
-import static org.example.qnafrontendjavafx.application.navigator.ApplicationPageType.GENERAL_USER_SIGN_UP_PAGE;
+import static org.example.qnafrontendjavafx.application.navigator.ApplicationPageType.LOGIN_PAGE;
 
 class GeneralUserSignUpController implements Controller {
     private final EventPublisher publisher;
@@ -53,7 +53,7 @@ class GeneralUserSignUpController implements Controller {
         } else {
             service.signUp(id, pw);
             System.out.println("Sign up");
-            publisher.publish(GENERAL_USER_SIGN_UP_PAGE);
+            publisher.publish(LOGIN_PAGE);
         }
     }
 
@@ -69,7 +69,7 @@ class GeneralUserSignUpController implements Controller {
      * <b> 역할: 홈 화면으로 이동 </b>
      */
     void onHomeButtonClick() {
-        publisher.publish(GENERAL_USER_SIGN_UP_PAGE);
+        publisher.publish(LOGIN_PAGE);
         System.out.println("Go Home");
     }
 }

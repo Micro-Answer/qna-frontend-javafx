@@ -10,7 +10,7 @@ import org.example.qnafrontendjavafx.application.domain.expert.user.signup.servi
 import org.example.qnafrontendjavafx.core.presentation.page.Controller;
 import org.example.qnafrontendjavafx.core.presentation.page.EventPublisher;
 
-import static org.example.qnafrontendjavafx.application.navigator.ApplicationPageType.EXPERT_SIGN_UP_PAGE;
+import static org.example.qnafrontendjavafx.application.navigator.ApplicationPageType.LOGIN_PAGE;
 
 class ExpertUserSignUpController implements Controller {
     private final EventPublisher publisher;
@@ -53,7 +53,7 @@ class ExpertUserSignUpController implements Controller {
         } else {
             service.signUp(id, pw);
             System.out.println("Sign up");
-            publisher.publish(EXPERT_SIGN_UP_PAGE);
+            publisher.publish(LOGIN_PAGE);
         }
     }
 
@@ -69,7 +69,7 @@ class ExpertUserSignUpController implements Controller {
      * <b> 역할: 홈 화면으로 이동 </b>
      */
     void onHomeButtonClick() {
-        publisher.publish(EXPERT_SIGN_UP_PAGE);
+        publisher.publish(LOGIN_PAGE);
         System.out.println("Go Home");
     }
 }
