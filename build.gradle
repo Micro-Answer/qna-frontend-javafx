@@ -35,7 +35,10 @@ javafx {
 }
 
 dependencies {
-  implementation("com.fasterxml.jackson.core:jackson-databind:2.17.3")
+  implementation project(':framework')
+  implementation project(':core')
+  implementation project(':event')
+  implementation project(':page')
   testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
   testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
 }

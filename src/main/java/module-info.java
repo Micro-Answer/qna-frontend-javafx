@@ -1,7 +1,10 @@
 module org.example.qnafrontendjavafx {
     requires javafx.controls;
-    requires com.fasterxml.jackson.databind;
     requires java.net.http;
+    requires qna.frontend.javafx.core;
+    requires qna.frontend.javafx.framework;
+    requires qna.frontend.javafx.event;
+    requires qna.frontend.javafx.page;
 
     exports org.example.qnafrontendjavafx;
 }

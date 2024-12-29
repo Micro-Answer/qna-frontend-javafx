@@ -2,22 +2,23 @@ package org.example.qnafrontendjavafx;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import org.example.qnafrontendjavafx.application.navigator.ApplicationEventBus;
-import org.example.qnafrontendjavafx.application.navigator.ApplicationPageNavigator;
-import org.example.qnafrontendjavafx.application.navigator.ApplicationPageRegistry;
-import org.example.qnafrontendjavafx.application.domain.general.user.signup.page.GeneralUserSignUpPage;
+import org.example.qnafrontendjavafx.developer.event.*;
+import org.example.qnafrontendjavafx.developer.page.expert.user.signup.InjectorExpertUserSignUp;
+import org.example.qnafrontendjavafx.developer.page.general.user.signup.InjectorGeneralUserSignUp;
+import org.example.qnafrontendjavafx.developer.page.signin.InjectorSignIn;
+import org.example.qnafrontendjavafx.framework.loader.PageLoaderProvider;
 
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) {
-        final var eventBus = new ApplicationEventBus();
-        final var generalUserSignUpPage = GeneralUserSignUpPage.getPage(eventBus);
-        final var pageRegistry = new ApplicationPageRegistry(generalUserSignUpPage);
-        final var pageNavigator = new ApplicationPageNavigator(pageRegistry);
+        var pageLoader = PageLoaderProvider.builder()
+                .register(new ExpertUserSignUpEvent(), InjectorExpertUserSignUp.getPage())
+                .register(new GeneralUserSignUpEvent(), InjectorGeneralUserSignUp.getPage())
+                .register(new SignInEvent(), InjectorSignIn.getPage())
+                .build()
+                .getPageLoader();
 
-        eventBus.register(pageNavigator);
-
-        pageNavigator.start(stage);
+        pageLoader.start(stage, new SignInEvent());
     }
 
     public static void main(String[] args) {
