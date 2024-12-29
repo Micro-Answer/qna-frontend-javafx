@@ -8,14 +8,11 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import org.example.qnafrontendjavafx.developer.event.SignInEvent;
 import org.example.qnafrontendjavafx.core.page.presentation.IController;
-import org.example.qnafrontendjavafx.core.loader.IEventPublisher;
 
-class Controller implements IController {
-    private final IEventPublisher publisher;
+class Controller extends IController {
     private final Service service;
 
-    Controller(IEventPublisher publisher, Service service) {
-        this.publisher = publisher;
+    Controller(Service service) {
         this.service = service;
     }
 

@@ -13,9 +13,20 @@ public class InjectorPageLoader {
         final var publisher = new EventPublisher(eventBus);
         final var registry = new PageRegistry();
 
-        registry.register(new GeneralUserSignUpEvent(), InjectorGeneralUserSignUp.getPage(publisher));
-        registry.register(new ExpertUserSignUpEvent(), InjectorExpertUserSignUp.getPage(publisher));
-        registry.register(new SignInEvent(), InjectorSignIn.getPage(publisher));
+        var event1 = new GeneralUserSignUpEvent();
+        var page1 = InjectorGeneralUserSignUp.getPage();
+        page1.setEventPublisher(publisher);
+        registry.register(event1, page1);
+
+        var event2 = new ExpertUserSignUpEvent();
+        var page2 = InjectorExpertUserSignUp.getPage();
+        page2.setEventPublisher(publisher);
+        registry.register(event2, page2);
+
+        var event3 = new SignInEvent();
+        var page3 = InjectorSignIn.getPage();
+        page3.setEventPublisher(publisher);
+        registry.register(event3, page3);
 
         final var pageLoader = new PageLoaderWithEventListener(registry);
         eventBus.register(pageLoader);
