@@ -3,15 +3,14 @@ package org.example.qnafrontendjavafx.utils.network;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
 
 public class Patch {
     private final static HttpClient client = HttpClient.newHttpClient();
 
-    public static Response getResponse(String url, String requestBody) throws Exception {
+    public static MyHttpResponse getResponse(String url, String requestBody) throws Exception {
         HttpRequest request = getRequest(url, requestBody);
-        HttpResponse<String> httpResponse = client.send(request, HttpResponse.BodyHandlers.ofString());
-        return new Response(httpResponse.statusCode(), httpResponse.body());
+        java.net.http.HttpResponse<String> httpResponse = client.send(request, java.net.http.HttpResponse.BodyHandlers.ofString());
+        return new MyHttpResponse(httpResponse.statusCode(), httpResponse.body());
     }
 
     // HTTP 요청 생성
