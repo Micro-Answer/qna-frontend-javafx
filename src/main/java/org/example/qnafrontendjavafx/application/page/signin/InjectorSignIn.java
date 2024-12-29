@@ -1,19 +1,18 @@
-package org.example.qnafrontendjavafx.application.page.general.user.signup;
+package org.example.qnafrontendjavafx.application.page.signin;
 
-import org.example.qnafrontendjavafx.core.loader.IPageEventBus;
+import org.example.qnafrontendjavafx.core.loader.IEventPublisher;
 import org.example.qnafrontendjavafx.core.page.presentation.IPage;
 
-public class FactoryGeneralUserSignUpPage {
+public class InjectorSignIn {
     private static volatile IPage page;
 
-    public static IPage getPage(IPageEventBus eventBus) {
+    public static IPage getPage(IEventPublisher eventPublisher) {
         if (page == null) {
             synchronized (Page.class) {
                 if (page == null) {
                     final var request = new Request();
                     final var service = new Service(request);
-                    final var publisher = new EventPublisher(eventBus);
-                    final var controller = new Controller(publisher, service);
+                    final var controller = new Controller(eventPublisher, service);
                     page = new Page(controller);
                 }
             }

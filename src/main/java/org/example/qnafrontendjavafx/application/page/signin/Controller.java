@@ -5,10 +5,11 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import org.example.qnafrontendjavafx.application.event.ExpertUserSignUpEvent;
+import org.example.qnafrontendjavafx.application.event.GeneralUserSignUpEvent;
+import org.example.qnafrontendjavafx.application.event.SignInEvent;
 import org.example.qnafrontendjavafx.core.page.presentation.IController;
-import org.example.qnafrontendjavafx.core.page.presentation.IEventPublisher;
-
-import static org.example.qnafrontendjavafx.application.loader.PageType.*;
+import org.example.qnafrontendjavafx.core.loader.IEventPublisher;
 
 class Controller implements IController {
     private final IEventPublisher publisher;
@@ -48,7 +49,7 @@ class Controller implements IController {
     private void onLoginButtonClick(String id, String pw) {
         System.out.println("Sign in");
         service.login(id, pw);
-        publisher.publish(LOGIN_PAGE);
+        publisher.publish(new SignInEvent());
     }
 
     /**
@@ -56,7 +57,7 @@ class Controller implements IController {
      */
     private void onGeneralUserSignUpButtonClick() {
         System.out.println("general user Sign up");
-        publisher.publish(GENERAL_USER_SIGN_UP_PAGE);
+        publisher.publish(new GeneralUserSignUpEvent());
     }
 
     /**
@@ -64,6 +65,6 @@ class Controller implements IController {
      */
     private void onExpertUserSignUpButtonClick() {
         System.out.println("expert user Sign up");
-        publisher.publish(EXPERT_SIGN_UP_PAGE);
+        publisher.publish(new ExpertUserSignUpEvent());
     }
 }

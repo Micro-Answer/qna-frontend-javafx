@@ -6,10 +6,9 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import org.example.qnafrontendjavafx.application.event.SignInEvent;
 import org.example.qnafrontendjavafx.core.page.presentation.IController;
-import org.example.qnafrontendjavafx.core.page.presentation.IEventPublisher;
-
-import static org.example.qnafrontendjavafx.application.loader.PageType.LOGIN_PAGE;
+import org.example.qnafrontendjavafx.core.loader.IEventPublisher;
 
 class Controller implements IController {
     private final IEventPublisher publisher;
@@ -53,7 +52,7 @@ class Controller implements IController {
         } else {
             service.signUp(id, pw);
             System.out.println("Sign up");
-            publisher.publish(LOGIN_PAGE);
+            publisher.publish(new SignInEvent());
         }
     }
 
@@ -69,7 +68,7 @@ class Controller implements IController {
      * <b> 역할: 홈 화면으로 이동 </b>
      */
     private void onHomeButtonClick() {
-        publisher.publish(LOGIN_PAGE);
+        publisher.publish(new SignInEvent());
         System.out.println("Go Home");
     }
 }

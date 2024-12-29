@@ -2,7 +2,7 @@ package org.example.qnafrontendjavafx.application.loader;
 
 import org.example.qnafrontendjavafx.core.loader.IPageEventBus;
 import org.example.qnafrontendjavafx.core.loader.IPageLoader;
-import org.example.qnafrontendjavafx.core.loader.IPageType;
+import org.example.qnafrontendjavafx.core.event.IEvent;
 
 class PageEventBus implements IPageEventBus {
     private IPageLoader pageLoader;
@@ -13,7 +13,7 @@ class PageEventBus implements IPageEventBus {
     }
 
     @Override
-    public void publish(IPageType pageType) {
-        pageLoader.show(pageType);
+    public void publish(IEvent event) {
+        pageLoader.show(event);
     }
 }
