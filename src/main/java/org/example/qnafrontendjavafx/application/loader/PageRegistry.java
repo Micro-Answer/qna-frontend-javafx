@@ -16,7 +16,7 @@ class PageRegistry implements IPageRegistry {
     }
 
     @Override
-    public Map<IEvent, IPage> getPages() {
-        return pages;
+    public IPage get(IEvent event) {
+        return pages.get(event);
     }
 }
