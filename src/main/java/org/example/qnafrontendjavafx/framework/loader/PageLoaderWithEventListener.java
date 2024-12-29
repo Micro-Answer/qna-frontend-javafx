@@ -20,11 +20,6 @@ class PageLoaderWithEventListener implements IPageLoader, IEventListener {
     }
 
     @Override
-    public void register(IEvent event, IPage page) {
-        pageRegistry.register(event, page);
-    }
-
-    @Override
     public void start(Stage primaryStage, IEvent event) {
         this.stage = primaryStage;
         show(event);
