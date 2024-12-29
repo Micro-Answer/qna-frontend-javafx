@@ -2,8 +2,8 @@ package org.example.qnafrontendjavafx;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import org.example.qnafrontendjavafx.application.event.SignInEvent;
-import org.example.qnafrontendjavafx.application.loader.InjectorPageLoader;
+import org.example.qnafrontendjavafx.developer.event.SignInEvent;
+import org.example.qnafrontendjavafx.framework.loader.InjectorPageLoader;
 
 public class HelloApplication extends Application {
     @Override
