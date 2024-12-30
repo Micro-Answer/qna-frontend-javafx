@@ -8,4 +8,8 @@ public abstract class AbstractService {
     public AbstractService(IUser user) {
         this.user = user;
     }
+
+    public AbstractService() {
+        this.user = null;
+    }
 }

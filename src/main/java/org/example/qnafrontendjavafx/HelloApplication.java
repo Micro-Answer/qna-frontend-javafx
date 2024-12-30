@@ -17,8 +17,8 @@ public class HelloApplication extends Application {
         IUser user = new User();
 
         var pageLoader = PageLoaderProvider.builder()
-                .register(new ExpertUserSignUpEvent(), InjectorExpertUserSignUp.getPage(user))
-                .register(new GeneralUserSignUpEvent(), InjectorGeneralUserSignUp.getPage(user))
+                .register(new ExpertUserSignUpEvent(), InjectorExpertUserSignUp.getPage())
+                .register(new GeneralUserSignUpEvent(), InjectorGeneralUserSignUp.getPage())
                 .register(new SignInEvent(), InjectorSignIn.getPage(user))
                 .register(new MyPageEvent(), InjectorMyPage.getPage(user))
                 .build()
