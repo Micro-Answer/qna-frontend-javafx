@@ -5,16 +5,16 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import org.example.qnafrontendjavafx.core.page.application.AbstractService;
 import org.example.qnafrontendjavafx.developer.event.ExpertUserSignUpEvent;
 import org.example.qnafrontendjavafx.developer.event.GeneralUserSignUpEvent;
 import org.example.qnafrontendjavafx.developer.event.SignInEvent;
 import org.example.qnafrontendjavafx.core.page.presentation.AbstractController;
 
 class Controller extends AbstractController {
-    private final Service service;
 
-    Controller(Service service) {
-        this.service = service;
+    Controller(AbstractService service) {
+        super(service);
     }
 
     @Override
@@ -44,9 +44,11 @@ class Controller extends AbstractController {
      * <b> 역할: 로그인 </b>
      */
     private void onLoginButtonClick(String id, String pw) {
-        System.out.println("Sign in");
-        service.login(id, pw);
-        publisher.publish(new SignInEvent());
+        if (service instanceof Service user) {
+            user.login(id, pw);
+            System.out.printf("Sign in. ID: %s, pw: %s", id, pw);
+            publisher.publish(new SignInEvent());
+        }
     }
 
     /**

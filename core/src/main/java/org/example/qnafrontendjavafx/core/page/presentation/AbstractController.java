@@ -8,7 +8,7 @@ public abstract class AbstractController {
     protected final AbstractService service;
     protected IEventPublisher publisher;
 
-    AbstractController(AbstractService service) {
+    public AbstractController(AbstractService service) {
         this.service = service;
     }
     public final void setEventPublisher(IEventPublisher publisher) {
