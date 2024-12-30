@@ -8,6 +8,7 @@ import javafx.scene.layout.VBox;
 import org.example.qnafrontendjavafx.core.page.application.AbstractService;
 import org.example.qnafrontendjavafx.developer.event.ExpertUserSignUpEvent;
 import org.example.qnafrontendjavafx.developer.event.GeneralUserSignUpEvent;
+import org.example.qnafrontendjavafx.developer.event.MyPageEvent;
 import org.example.qnafrontendjavafx.developer.event.SignInEvent;
 import org.example.qnafrontendjavafx.core.page.presentation.AbstractController;
 
@@ -47,7 +48,7 @@ class Controller extends AbstractController {
         if (service instanceof Service user) {
             user.login(id, pw);
             System.out.printf("Sign in. ID: %s, pw: %s", id, pw);
-            publisher.publish(new SignInEvent());
+            publisher.publish(new MyPageEvent());
         }
     }
 
