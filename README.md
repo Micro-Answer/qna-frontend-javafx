@@ -71,3 +71,4 @@ org.example.qnafrontendjavafx
 - [x] 일반 유저 회원 가입
 - [x] 전문가 유저 회원 가입
 - [x] 로그인 
+- [x] 마이페이지 
