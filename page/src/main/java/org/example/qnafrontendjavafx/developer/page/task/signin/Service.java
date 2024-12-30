@@ -2,6 +2,7 @@ package org.example.qnafrontendjavafx.developer.page.task.signin;
 
 import org.example.qnafrontendjavafx.core.page.application.AbstractService;
 import org.example.qnafrontendjavafx.core.page.shared.IUser;
+import org.example.qnafrontendjavafx.developer.page.shared.behavior.Role;
 
 class Service extends AbstractService {
     private final Request request;
@@ -13,5 +14,9 @@ class Service extends AbstractService {
 
     void login(String id, String password) {
         request.login(new EntityUser(id, password));
+        if (user instanceof Role role) {
+            role.setId(id);
+            role.setRole("temporary");
+        }
     }
 }
