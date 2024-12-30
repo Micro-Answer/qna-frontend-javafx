@@ -1,4 +1,4 @@
-package org.example.qnafrontendjavafx.developer.page.general.user.signup;
+package org.example.qnafrontendjavafx.developer.page.task.general.user.signup;
 
 class EntityGeneralUser {
     private String id;

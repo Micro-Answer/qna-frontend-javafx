@@ -1,4 +1,4 @@
-package org.example.qnafrontendjavafx.developer.page.expert.user.signup;
+package org.example.qnafrontendjavafx.developer.page.task.expert.user.signup;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;

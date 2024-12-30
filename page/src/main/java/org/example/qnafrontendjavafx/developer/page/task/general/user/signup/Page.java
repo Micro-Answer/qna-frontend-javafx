@@ -1,4 +1,4 @@
-package org.example.qnafrontendjavafx.developer.page.general.user.signup;
+package org.example.qnafrontendjavafx.developer.page.task.general.user.signup;
 
 import org.example.qnafrontendjavafx.core.page.presentation.AbstractIPage;
 import org.example.qnafrontendjavafx.core.page.presentation.AbstractController;

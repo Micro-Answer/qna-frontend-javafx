@@ -1,4 +1,4 @@
-package org.example.qnafrontendjavafx.developer.page.signin;
+package org.example.qnafrontendjavafx.developer.page.task.general.user.signup;
 
 class Response {
     private String result;
@@ -22,6 +22,6 @@ class Response {
 
     @Override
     public String toString() {
-        return String.format("SignInResponse{result='%s', statusCode=%d}", result, statusCode);
+        return String.format("SignUpResponse{result='%s', statusCode=%d}", result, statusCode);
     }
 }

@@ -3,9 +3,9 @@ package org.example.qnafrontendjavafx;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import org.example.qnafrontendjavafx.developer.event.*;
-import org.example.qnafrontendjavafx.developer.page.expert.user.signup.InjectorExpertUserSignUp;
-import org.example.qnafrontendjavafx.developer.page.general.user.signup.InjectorGeneralUserSignUp;
-import org.example.qnafrontendjavafx.developer.page.signin.InjectorSignIn;
+import org.example.qnafrontendjavafx.developer.page.task.expert.user.signup.InjectorExpertUserSignUp;
+import org.example.qnafrontendjavafx.developer.page.task.general.user.signup.InjectorGeneralUserSignUp;
+import org.example.qnafrontendjavafx.developer.page.task.signin.InjectorSignIn;
 import org.example.qnafrontendjavafx.framework.loader.PageLoaderProvider;
 
 public class HelloApplication extends Application {

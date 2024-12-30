@@ -1,4 +1,4 @@
-package org.example.qnafrontendjavafx.developer.page.general.user.signup;
+package org.example.qnafrontendjavafx.developer.page.task.expert.user.signup;
 
 class Response {
     private String result;

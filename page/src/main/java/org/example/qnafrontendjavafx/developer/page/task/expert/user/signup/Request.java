@@ -1,4 +1,4 @@
-package org.example.qnafrontendjavafx.developer.page.expert.user.signup;
+package org.example.qnafrontendjavafx.developer.page.task.expert.user.signup;
 
 class Request {
 

@@ -1,4 +1,4 @@
-package org.example.qnafrontendjavafx.developer.page.general.user.signup;
+package org.example.qnafrontendjavafx.developer.page.task.expert.user.signup;
 
 class Service {
     private final Request request;
@@ -8,6 +8,6 @@ class Service {
     }
 
     void signUp(String id, String password) {
-        request.signUp(new EntityGeneralUser(id, password));
+        request.signUp(new EntityExpertUser(id, password));
     }
 }

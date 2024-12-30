@@ -1,4 +1,4 @@
-package org.example.qnafrontendjavafx.developer.page.signin;
+package org.example.qnafrontendjavafx.developer.page.task.signin;
 
 class Request {
     void login(EntityUser user) {

@@ -1,4 +1,4 @@
-package org.example.qnafrontendjavafx.developer.page.signin;
+package org.example.qnafrontendjavafx.developer.page.task.signin;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
