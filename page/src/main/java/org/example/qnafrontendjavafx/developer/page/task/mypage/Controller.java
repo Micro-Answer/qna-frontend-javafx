@@ -1,6 +1,7 @@
 package org.example.qnafrontendjavafx.developer.page.task.mypage;
 
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
@@ -27,16 +28,16 @@ class Controller extends AbstractController {
             role += myProfile.getRole();
         }
 
-        var idField = new TextField();
-        idField.setPromptText(id);
+        var idLabel = new Label();
+        idLabel.setText(id);
 
-        var roleField = new TextField();
-        roleField.setPromptText(role);
+        var roleLabel = new Label();
+        roleLabel.setText(role);
 
         Button logoutButton = new Button("Log Out");
         logoutButton.setOnAction(e -> onLogoutButtonClick());
 
-        layout.getChildren().addAll(idField, roleField, logoutButton);
+        layout.getChildren().addAll(idLabel, roleLabel, logoutButton);
 
         return layout;
     }
