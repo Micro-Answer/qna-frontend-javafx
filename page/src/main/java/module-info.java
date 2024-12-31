@@ -7,6 +7,6 @@ module qna.frontend.javafx.page {
     exports org.example.qnafrontendjavafx.developer.page.task.general.user.signup;
     exports org.example.qnafrontendjavafx.developer.page.task.signin;
     exports org.example.qnafrontendjavafx.developer.page.task.mypage;
-    exports org.example.qnafrontendjavafx.developer.page.cache;
-    exports org.example.qnafrontendjavafx.developer.page.cache.store;
+    exports org.example.qnafrontendjavafx.developer.page.cookie;
+    exports org.example.qnafrontendjavafx.developer.page.cookie.store;
 }

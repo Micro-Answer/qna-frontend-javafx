@@ -1,15 +1,15 @@
 package org.example.qnafrontendjavafx.core.page.application;
 
-import org.example.qnafrontendjavafx.core.page.cache.IUser;
+import org.example.qnafrontendjavafx.core.page.cookie.ICookie;
 
 public abstract class AbstractService {
-    protected IUser user;
+    protected ICookie cookie;
 
-    public AbstractService(IUser user) {
-        this.user = user;
+    public AbstractService(ICookie cookie) {
+        this.cookie = cookie;
     }
 
     public AbstractService() {
-        this.user = null;
+        this.cookie = null;
     }
 }

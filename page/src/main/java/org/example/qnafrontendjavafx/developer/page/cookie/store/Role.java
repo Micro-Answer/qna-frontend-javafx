@@ -1,4 +1,4 @@
-package org.example.qnafrontendjavafx.developer.page.cache.store;
+package org.example.qnafrontendjavafx.developer.page.cookie.store;
 
 public interface Role {
     String getId();

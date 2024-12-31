@@ -1,9 +1,9 @@
-package org.example.qnafrontendjavafx.developer.page.cache;
+package org.example.qnafrontendjavafx.developer.page.cookie;
 
-import org.example.qnafrontendjavafx.core.page.cache.IUser;
-import org.example.qnafrontendjavafx.developer.page.cache.store.Role;
+import org.example.qnafrontendjavafx.core.page.cookie.ICookie;
+import org.example.qnafrontendjavafx.developer.page.cookie.store.Role;
 
-public class User implements IUser, Role {
+public class Cookie implements ICookie, Role {
     private String id;
     private String role;
 
