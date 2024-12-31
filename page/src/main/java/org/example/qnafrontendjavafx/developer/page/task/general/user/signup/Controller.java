@@ -6,14 +6,14 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
-import org.example.qnafrontendjavafx.core.page.application.AbstractService;
 import org.example.qnafrontendjavafx.developer.event.SignInEvent;
 import org.example.qnafrontendjavafx.core.page.presentation.AbstractController;
 
 class Controller extends AbstractController {
+    private Service service;
 
-    Controller(AbstractService service) {
-        super(service);
+    Controller(Service service) {
+        this.service = service;
     }
 
     @Override
@@ -47,11 +47,9 @@ class Controller extends AbstractController {
         if (id.isEmpty() || pw.isEmpty()) {
             alert();
         }
-        if (service instanceof Service user) {
-            user.signUp(id, pw);
-            System.out.printf("General User Sign up. ID: %s, pw: %s", id, pw);
-            publisher.publish(new SignInEvent());
-        }
+        service.signUp(id, pw);
+        System.out.printf("General User Sign up. ID: %s, pw: %s", id, pw);
+        publisher.publish(new SignInEvent());
     }
 
     private void alert() {

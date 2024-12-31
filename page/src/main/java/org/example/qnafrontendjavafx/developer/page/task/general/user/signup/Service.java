@@ -1,8 +1,6 @@
 package org.example.qnafrontendjavafx.developer.page.task.general.user.signup;
 
-import org.example.qnafrontendjavafx.core.page.application.AbstractService;
-
-class Service extends AbstractService {
+class Service {
     private final Request request;
 
     Service(Request request) {
