@@ -1,7 +1,7 @@
 package org.example.qnafrontendjavafx.developer.page.task.mypage;
 
 import org.example.qnafrontendjavafx.core.page.presentation.AbstractIPage;
-import org.example.qnafrontendjavafx.core.page.shared.IUser;
+import org.example.qnafrontendjavafx.core.page.cache.IUser;
 
 public class InjectorMyPage {
     private static volatile AbstractIPage page;

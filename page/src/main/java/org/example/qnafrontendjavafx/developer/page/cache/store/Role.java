@@ -1,4 +1,4 @@
-package org.example.qnafrontendjavafx.developer.page.shared.behavior;
+package org.example.qnafrontendjavafx.developer.page.cache.store;
 
 public interface Role {
     String getId();

@@ -1,6 +1,6 @@
 package org.example.qnafrontendjavafx.core.page.application;
 
-import org.example.qnafrontendjavafx.core.page.shared.IUser;
+import org.example.qnafrontendjavafx.core.page.cache.IUser;
 
 public abstract class AbstractService {
     protected IUser user;

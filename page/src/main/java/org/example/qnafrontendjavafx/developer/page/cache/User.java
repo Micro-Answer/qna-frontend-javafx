@@ -1,7 +1,7 @@
-package org.example.qnafrontendjavafx.developer.page.shared;
+package org.example.qnafrontendjavafx.developer.page.cache;
 
-import org.example.qnafrontendjavafx.core.page.shared.IUser;
-import org.example.qnafrontendjavafx.developer.page.shared.behavior.Role;
+import org.example.qnafrontendjavafx.core.page.cache.IUser;
+import org.example.qnafrontendjavafx.developer.page.cache.store.Role;
 
 public class User implements IUser, Role {
     private String id;

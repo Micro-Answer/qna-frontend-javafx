@@ -1,8 +1,8 @@
 package org.example.qnafrontendjavafx.developer.page.task.mypage;
 
 import org.example.qnafrontendjavafx.core.page.application.AbstractService;
-import org.example.qnafrontendjavafx.core.page.shared.IUser;
-import org.example.qnafrontendjavafx.developer.page.shared.behavior.Role;
+import org.example.qnafrontendjavafx.core.page.cache.IUser;
+import org.example.qnafrontendjavafx.developer.page.cache.store.Role;
 
 class Service extends AbstractService {
     private final Request request;
