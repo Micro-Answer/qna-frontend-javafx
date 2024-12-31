@@ -11,6 +11,11 @@ public abstract class AbstractController {
     public AbstractController(AbstractService service) {
         this.service = service;
     }
+
+    public AbstractController() {
+        this.service = null;
+    }
+
     public final void setEventPublisher(IEventPublisher publisher) {
         this.publisher = publisher;
     }
